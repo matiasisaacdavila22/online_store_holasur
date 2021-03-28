@@ -1,5 +1,6 @@
-# OnlineStoreNG administra tu tienda
+# OnlineStoreNG --administra tu tienda
 
+Este es un projecto generado con angular cli vesion 11.2.6
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
@@ -11,6 +12,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
+
+La construccion de una panel adminstrativo para tu tienda con vinculacion con la proncipal platafoema de venta mercadolibre and mercadonegro,online y tu propia pagina de ventas.
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
