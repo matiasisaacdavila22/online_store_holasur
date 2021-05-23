@@ -1,0 +1,102 @@
+    <legend>Registro</legend>
+    <div class="row">
+        <form [formGroup]='fgValidator' class="col s12" id="reg-form">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="name" formControlName='name' type="text" class="validate" required>
+              <label for="name">First Name</label>
+              <div class="warning-validator" *ngIf="fgv.name.errors && (fgv.name.dirty || fgv.name.touched)">
+                  <strong *ngIf='fgv.name.errors.required'>this field is required</strong>
+                  <strong *ngIf='fgv.name.errors.minlength'>this field must be at LEAST 3 CARACTERES of long</strong>
+                  <strong *ngIf='fgv.name.errors.maxlength'>his field must be at LEAST 30 CARACTERES MAXIMUM of long</strong>
+              </div>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="lastname" formControlName='lastname' type="text" class="validate" required>
+              <label for="lastname">Last Name</label>
+              <div class="warning-validator" *ngIf="fgv.lastname.errors && (fgv.lastname.dirty || fgv.lastname.touched)">
+                <strong *ngIf='fgv.lastname.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.lastname.errors.minlength'>this field must be at LEAST 3 CARACTERES of long</strong>
+                <strong *ngIf='fgv.lastname.errors.maxlength'>his field must be at LEAST 30 CARACTERES MAXIMUM  of long</strong>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">assignment_ind</i>
+              <input id="document" formControlName='document' type="text" class="validate" required>
+              <label for="document">Documento</label>
+              <div class="warning-validator" *ngIf="fgv.document.errors && (fgv.document.dirty || fgv.document.touched)">
+                <strong *ngIf='fgv.document.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.document.errors.minlength'>this field must be at LEAST 7 CARACTERES of long</strong>
+                <strong *ngIf='fgv.document.errors.maxlength'>his field must be at LEAST 30 CARACTERES MAXIMUM of long</strong>
+            </div>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">call</i>
+              <input id="phone" formControlName='phone' type="text" class="validate" required>
+              <label for="phone">CellPhone</label>
+              <div class="warning-validator" *ngIf="fgv.phone.errors && (fgv.phone.dirty || fgv.phone.touched)">
+                <strong *ngIf='fgv.phone.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.phone.errors.minlength'>this field must be at LEAST 12 CARACTERES of long</strong>
+                <strong *ngIf='fgv.phone.errors.maxlength'>his field must be at LEAST 14 CARACTERES MAXIMUM of long</strong>
+            </div>
+            </div>
+          </div>
+                    <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">map</i>
+              <input id="city" formControlName='city' type="text" class="validate" required>
+              <label for="city">Ciudad</label>
+              <div class="warning-validator" *ngIf="fgv.city.errors && (fgv.city.dirty || fgv.city.touched)">
+                <strong *ngIf='fgv.city.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.city.errors.minlength'>this field must be at LEAST 3 CARACTERES of long</strong>
+                <strong *ngIf='fgv.city.errors.maxlength'>his field must be at LEAST 20 CARACTERES MAXIMUM  of long</strong>
+            </div>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">add_location</i>
+              <input id="address" formControlName='address' type="text" class="validate" required>
+              <label for="address">Direccion</label>
+              <div class="warning-validator" *ngIf="fgv.address.errors && (fgv.address.dirty || fgv.address.touched)">
+                <strong *ngIf='fgv.address.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.address.errors.minlength'>this field must be at LEAST 2 CARACTERES of long</strong>
+                <strong *ngIf='fgv.address.errors.maxlength'>his field must be at LEAST 25 CARACTERES MAXIMUM of long</strong>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mail</i>
+              <input id="email" formControlName='email' type="email" class="validate" required>
+              <label for="email">Email</label>
+              <div class="warning-validator" *ngIf="fgv.email.errors && (fgv.email.dirty || fgv.email.touched)">
+                <strong *ngIf='fgv.email.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.email.errors.email'>this field must be type EMAIL</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" formControlName='password' type="password" class="validate" minlength="6" required>
+              <label for="password">Password</label>
+              <div class="warning-validator" *ngIf="fgv.password.errors && (fgv.password.dirty || fgv.password.touched)">
+                <strong *ngIf='fgv.password.errors.required'>this field is required</strong>
+                <strong *ngIf='fgv.password.errors.minlength'>this field must be at LEAST 6 CARACTERES of long</strong>
+                <strong *ngIf='fgv.password.errors.maxlength'>his field must be at LEAST 25 CARACTERES MAXIMUM of long</strong>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <button (click)='CustomerRegisterFn()' class="btn btn-large btn-register waves-effect waves-light" type="button" name="action">Register
+                <i class="material-icons right">done</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+ 
